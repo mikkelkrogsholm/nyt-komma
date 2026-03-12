@@ -11,15 +11,20 @@ Danske kommaregler er svære -- selv for AI. Denne skill giver Claude et komplet
 
 ## Installation
 
-### Claude Code (CLI)
+Klon repoet og kopier skill-mappen til din Claude Code skills-mappe:
 
 ```bash
-claude install-skill github:mikkelkrogsholm/nyt-komma/nyt-komma
+git clone https://github.com/mikkelkrogsholm/nyt-komma.git /tmp/nyt-komma-repo
+mkdir -p ~/.claude/skills/nyt-komma
+cp -r /tmp/nyt-komma-repo/nyt-komma/. ~/.claude/skills/nyt-komma/
 ```
 
-### Manuel installation
+Du kan også installere den per projekt i stedet for globalt:
 
-Kopier mappen `nyt-komma/` ind i dit projekts `.claude/skills/`-mappe.
+```bash
+mkdir -p .claude/skills/nyt-komma
+cp -r /tmp/nyt-komma-repo/nyt-komma/. .claude/skills/nyt-komma/
+```
 
 ## Brug
 
