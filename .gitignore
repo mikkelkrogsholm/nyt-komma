@@ -1,0 +1,6 @@
+*.pdf
+.claude/
+.agents/
+nyt-komma-workspace/
+nyt-komma/evals/
+skills-lock.json
