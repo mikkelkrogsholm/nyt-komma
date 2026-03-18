@@ -1,0 +1,265 @@
+{
+  "skill_name": "grammatisk-komma",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Ret kommaerne i denne tekst med grammatisk komma (startkomma): 'Min søster der bor i København fortalte mig at hun havde set en film som handlede om en mand der ville rejse til Mars og at filmen var rigtig god selvom den var lang. Bagefter gik vi ud og spiste sushi løg ris og tang og vi drak grøn te og sake.'",
+      "expected_output": "Tekst med korrekte kommaer efter Grammatisk Komma-reglerne, inkl. startkomma foran alle ledsætninger, slutkommaer efter ledsætninger, komma mellem helsætninger, korrekt opremsning uden Oxford-komma, og ingen komma mellem subjekt og verbum.",
+      "files": [],
+      "assertions": [
+        {
+          "name": "startkomma_foran_der_bor",
+          "description": "Startkomma foran relativsætningen 'der bor i København'",
+          "check": "Der er komma foran 'der bor i København' (startkomma)"
+        },
+        {
+          "name": "slutkomma_efter_koebenhavn",
+          "description": "Obligatorisk slutkomma efter 'der bor i København'",
+          "check": "Der er komma efter 'København' (slutkomma efter ledsætningen)"
+        },
+        {
+          "name": "startkomma_foran_at_hun",
+          "description": "Startkomma foran ledsætningen 'at hun havde set en film'",
+          "check": "Der er komma foran 'at hun havde set'"
+        },
+        {
+          "name": "startkomma_foran_som_handlede",
+          "description": "Startkomma foran relativsætningen 'som handlede om en mand'",
+          "check": "Der er komma foran 'som handlede'"
+        },
+        {
+          "name": "startkomma_foran_der_ville",
+          "description": "Startkomma foran relativsætningen 'der ville rejse til Mars'",
+          "check": "Der er komma foran 'der ville rejse'"
+        },
+        {
+          "name": "slutkomma_foer_og_at_filmen",
+          "description": "Slutkomma for den første at-ledsætning før 'og at filmen'",
+          "check": "Der er komma foran 'og at filmen' (obligatorisk slutkomma)"
+        },
+        {
+          "name": "startkomma_foran_selvom",
+          "description": "Startkomma foran ledsætningen 'selvom den var lang'",
+          "check": "Der er komma foran 'selvom den var lang'"
+        },
+        {
+          "name": "ingen_oxford_komma",
+          "description": "Ingen komma før 'og tang' i opremsningen",
+          "check": "Der er IKKE komma umiddelbart før 'og tang'"
+        },
+        {
+          "name": "helsaetningskomma_foer_og_vi_drak",
+          "description": "Komma mellem to helsætninger: 'vi spiste...' og 'vi drak...'",
+          "check": "Der er komma før 'og vi drak' (helsætningskomma)"
+        },
+        {
+          "name": "ingen_komma_mellem_subjekt_og_verbum",
+          "description": "Aldrig komma mellem subjekt og verbum",
+          "check": "Der er ikke komma mellem 'Min søster' og 'fortalte' (undtagen parentetisk indskud med kommapar)"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Skriv et kort afsnit (4-5 sætninger) om hvorfor motion er vigtigt. Brug korrekt dansk kommatering efter Grammatisk Komma (med startkomma foran ledsætninger).",
+      "expected_output": "Et kort afsnit på dansk med 4-5 sætninger om motion, med korrekt kommatering efter Grammatisk Komma inkl. startkomma foran alle ledsætninger.",
+      "files": [],
+      "assertions": [
+        {
+          "name": "startkomma_foran_ledsaetninger",
+          "description": "Startkomma foran alle ledsætninger (at, der, som, når, fordi, hvis osv.)",
+          "check": "Alle ledsætninger i teksten har startkomma foran sig"
+        },
+        {
+          "name": "slutkommaer_til_stede",
+          "description": "Obligatoriske slutkommaer efter ledsætninger der ikke står sidst",
+          "check": "Alle ledsætninger der efterfølges af mere tekst har slutkomma"
+        },
+        {
+          "name": "ingen_oxford_komma",
+          "description": "Ingen Oxford-kommaer i eventuelle opremsninger",
+          "check": "Der er aldrig komma umiddelbart før 'og' eller 'eller' i en opremsning af ord/ordgrupper"
+        },
+        {
+          "name": "ingen_komma_mellem_subjekt_og_verbum",
+          "description": "Aldrig komma direkte mellem subjekt og verbum",
+          "check": "Ingen steder hvor et subjekt efterfølges direkte af komma og derefter verbum (uden parentetisk indskud)"
+        },
+        {
+          "name": "helsaetningskomma_korrekt",
+          "description": "Komma mellem sideordnede helsætninger",
+          "check": "Hvis der er sideordnede helsætninger forbundet med 'og', 'men', 'for' osv., er der komma foran konjunktionen"
+        },
+        {
+          "name": "ingen_indledningskomma",
+          "description": "Intet komma efter indledende præpositionsforbindelser/adverbialer",
+          "check": "Hvis en sætning starter med en præpositionsforbindelse eller adverbial, er der IKKE komma efter den"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Ret kommaerne med grammatisk komma (startkomma): 'Thomas som er læge og hans kone Maria der arbejder som sygeplejerske besluttede at de ville flytte til Aarhus selvom de havde boet i København i mange år. Deres børn altså Sofie og Emil var ikke begejstrede men de accepterede det fordi forældrene lovede at de kunne beholde deres venner og at de ville besøge København hver måned. Bortset fra det regnfulde vejr er Aarhus en dejlig by med mange parker museer og caféer.'",
+      "expected_output": "Tekst med korrekte kommaer efter Grammatisk Komma, inkl. startkomma foran alle ledsætninger, parentetiske relativsætninger med komma begge sider, slutkommaer, helsætningskomma, opremsning uden Oxford-komma, intet indledningskomma, og parentetisk apposition.",
+      "files": [],
+      "assertions": [
+        {
+          "name": "parentetisk_relativsaetning_thomas_startkomma",
+          "description": "Startkomma foran parentetisk relativsætning 'som er læge'",
+          "check": "Der er komma foran 'som er læge'"
+        },
+        {
+          "name": "parentetisk_relativsaetning_thomas_slutkomma",
+          "description": "Slutkomma efter parentetisk relativsætning 'som er læge'",
+          "check": "Der er komma efter 'læge'"
+        },
+        {
+          "name": "parentetisk_relativsaetning_maria_startkomma",
+          "description": "Startkomma foran 'der arbejder som sygeplejerske'",
+          "check": "Der er komma foran 'der arbejder som sygeplejerske'"
+        },
+        {
+          "name": "parentetisk_relativsaetning_maria_slutkomma",
+          "description": "Slutkomma efter 'der arbejder som sygeplejerske'",
+          "check": "Der er komma efter 'sygeplejerske'"
+        },
+        {
+          "name": "startkomma_foran_at_de_ville_flytte",
+          "description": "Startkomma foran ledsætningen 'at de ville flytte'",
+          "check": "Der er komma foran 'at de ville flytte'"
+        },
+        {
+          "name": "startkomma_foran_selvom",
+          "description": "Startkomma foran 'selvom de havde boet i København'",
+          "check": "Der er komma foran 'selvom de havde boet'"
+        },
+        {
+          "name": "parentetisk_apposition_sofie_og_emil",
+          "description": "Forklarende tilføjelse 'altså Sofie og Emil' har komma begge sider",
+          "check": "Der er komma før 'altså Sofie og Emil' og efter 'Emil'"
+        },
+        {
+          "name": "helsaetningskomma_foer_men",
+          "description": "Obligatorisk komma før 'men' der forbinder to helsætninger",
+          "check": "Der er komma før 'men de accepterede'"
+        },
+        {
+          "name": "startkomma_foran_fordi",
+          "description": "Startkomma foran ledsætningen 'fordi forældrene lovede'",
+          "check": "Der er komma foran 'fordi forældrene lovede'"
+        },
+        {
+          "name": "startkomma_foran_at_de_kunne",
+          "description": "Startkomma foran ledsætningen 'at de kunne beholde'",
+          "check": "Der er komma foran 'at de kunne beholde'"
+        },
+        {
+          "name": "slutkomma_foer_og_at_de_ville",
+          "description": "Slutkomma for første at-ledsætning før 'og at de ville besøge'",
+          "check": "Der er komma foran 'og at de ville besøge'"
+        },
+        {
+          "name": "startkomma_foran_at_de_ville_besoege",
+          "description": "Startkomma foran ledsætningen 'at de ville besøge' (efter og)",
+          "check": "Der er komma foran 'at de ville besøge' (men IKKE mellem 'og' og 'at')"
+        },
+        {
+          "name": "ingen_oxford_komma_parker_museer_cafeer",
+          "description": "Ingen Oxford-komma i opremsningen 'parker, museer og caféer'",
+          "check": "Der er IKKE komma før 'og caféer'"
+        },
+        {
+          "name": "ingen_indledningskomma_bortset_fra",
+          "description": "Intet indledningskomma efter 'Bortset fra det regnfulde vejr'",
+          "check": "Der er IKKE komma efter 'vejr' og før 'er Aarhus'"
+        },
+        {
+          "name": "ingen_komma_mellem_subjekt_og_verbum",
+          "description": "Aldrig komma mellem subjekt og verbum",
+          "check": "Intet komma mellem det samlede subjekt og 'besluttede' (undtagen parentetiske indskud med kommapar)"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Ret kommaerne med grammatisk komma: 'Hvis du bliver sulten inden maden er færdig kan du tage et æble. Hvordan kan det være at han aldrig er her når man har brug for ham? Selv om han siger at det bliver for dyrt når vi køber ind i Illum vil jeg påstå at de har de bedste varer.'",
+      "expected_output": "Tekst med korrekte kommaer efter Grammatisk Komma, inkl. startkomma foran ALLE ledsætninger (også ledsætninger i ledsætninger) og slutkommaer.",
+      "files": [],
+      "assertions": [
+        {
+          "name": "startkomma_foran_inden",
+          "description": "Startkomma foran ledsætningen 'inden maden er færdig'",
+          "check": "Der er komma foran 'inden maden er færdig'"
+        },
+        {
+          "name": "slutkomma_efter_faerdig",
+          "description": "Slutkomma efter 'inden maden er færdig'",
+          "check": "Der er komma efter 'færdig'"
+        },
+        {
+          "name": "startkomma_foran_at_han_aldrig",
+          "description": "Startkomma foran 'at han aldrig er her'",
+          "check": "Der er komma foran 'at han aldrig er her'"
+        },
+        {
+          "name": "startkomma_foran_naar_man",
+          "description": "Startkomma foran 'når man har brug for ham'",
+          "check": "Der er komma foran 'når man har brug for ham'"
+        },
+        {
+          "name": "startkomma_foran_at_det_bliver",
+          "description": "Startkomma foran ledsætning-i-ledsætning 'at det bliver for dyrt'",
+          "check": "Der er komma foran 'at det bliver for dyrt'"
+        },
+        {
+          "name": "startkomma_foran_naar_vi_koeber",
+          "description": "Startkomma foran ledsætning-i-ledsætning 'når vi køber ind i Illum'",
+          "check": "Der er komma foran 'når vi køber ind i Illum'"
+        },
+        {
+          "name": "slutkomma_efter_illum",
+          "description": "Slutkomma efter hele ledsætningsblokken før helsætningsstammen",
+          "check": "Der er komma efter 'Illum' (slutkomma før 'vil jeg påstå')"
+        },
+        {
+          "name": "startkomma_foran_at_de_har",
+          "description": "Startkomma foran ledsætningen 'at de har de bedste varer'",
+          "check": "Der er komma foran 'at de har de bedste varer'"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Ret kommaerne med grammatisk komma: 'Han opdagede først fejlen en måned efter at han havde installeret programmet. De listede af uden at nogen så dem. Jeg aner ikke hvor mange af bøgerne der er blevet solgt. Han opfører sig som om han ejer hele værtshuset.'",
+      "expected_output": "Tekst med korrekte startkomma-placeringer: foran forholdsord der hører til ledsætningen, foran hv-ord (ikke foran 'der'), og foran 'som om'.",
+      "files": [],
+      "assertions": [
+        {
+          "name": "startkomma_foran_en_maaned_efter",
+          "description": "Startkomma foran 'en måned efter at' (forholdsordet hører til ledsætningen)",
+          "check": "Der er komma foran 'en måned efter at' (ikke kun foran 'at')"
+        },
+        {
+          "name": "startkomma_foran_uden_at",
+          "description": "Startkomma foran 'uden at' (forholdsordet hører til ledsætningen)",
+          "check": "Der er komma foran 'uden at' (ikke kun foran 'at')"
+        },
+        {
+          "name": "startkomma_foran_hvor_mange",
+          "description": "Startkomma foran hv-ordet 'hvor mange'",
+          "check": "Der er komma foran 'hvor mange'"
+        },
+        {
+          "name": "ikke_komma_foran_der_i_hv_saetning",
+          "description": "IKKE komma foran 'der' i hv-ledsætningen",
+          "check": "Der er IKKE komma foran 'der er blevet solgt'"
+        },
+        {
+          "name": "startkomma_foran_som_om",
+          "description": "Startkomma foran 'som om' (samlet bindeord)",
+          "check": "Der er komma foran 'som om' (ikke mellem 'som' og 'om')"
+        }
+      ]
+    }
+  ]
+}

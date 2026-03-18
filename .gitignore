@@ -4,3 +4,11 @@
 nyt-komma-workspace/
 nyt-komma/evals/
 skills-lock.json
+output/
+
+extract_text.py
+.gitignore
+.gitignore
+
+.env
+test_ocr.py
